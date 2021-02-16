@@ -4,19 +4,22 @@ namespace RemoteControlAPI.Devices
 {
     public class GarageDoor
     {
-        public GarageDoor() { }
-        public string name = "Garage Door";
+        private string _spaceName;
+        public GarageDoor(string spaceName)
+        {
+            _spaceName = spaceName;
+        }
         public void up()
         {
-            Console.WriteLine("Garage Door is Open");
+            Console.WriteLine($"{_spaceName} Garage Door is Open");
         }
         public void down()
         {
-            Console.WriteLine("Garage Door is Closed");
+            Console.WriteLine($"{_spaceName} Garage Door is Closed");
         }
         public void stop()
         {
-            Console.WriteLine("Garage Door is Stopped");
+            Console.WriteLine($"{_spaceName} Garage Door is Stopped");
         }
     }
 }

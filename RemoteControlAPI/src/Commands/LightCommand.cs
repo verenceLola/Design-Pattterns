@@ -12,4 +12,13 @@ namespace RemoteControlAPI.Commands
         }
         public void execute() => _light.on();
     }
+    public class LightOffCommand : Command
+    {
+        private Light _light;
+        public LightOffCommand(Light light)
+        {
+            _light = light;
+        }
+        public void execute() => _light.off();
+    }
 }

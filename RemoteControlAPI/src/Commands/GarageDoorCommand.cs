@@ -15,4 +15,16 @@ namespace RemoteControlAPI.Commands
             _garageDoor.up();
         }
     }
+    public class GarageDoorCloseCommand : Command
+    {
+        private GarageDoor _garageDoor;
+        public GarageDoorCloseCommand(GarageDoor garageDoor)
+        {
+            _garageDoor = garageDoor;
+        }
+        public void execute()
+        {
+            _garageDoor.down();
+        }
+    }
 }
