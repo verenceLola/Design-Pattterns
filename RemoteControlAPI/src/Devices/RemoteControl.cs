@@ -1,6 +1,7 @@
 using RemoteControlAPI.Interfaces;
 using RemoteControlAPI.Commands;
 using System.Text;
+using System;
 
 namespace RemoteControlAPI.Devices
 {
@@ -21,18 +22,23 @@ namespace RemoteControlAPI.Devices
     public class RemoteControl
     {
         Command[] onCommands, offCommands;
+        public void NoCommand()
+        {
+            Console.WriteLine("Slot not Configured!!");
+        }
         public RemoteControl()
         {
             onCommands = new Command[7];
             offCommands = new Command[7];
 
-            Command noCommand = new NoCommand();
+            Command noCommand = new Command(NoCommand);
             for (int i = 0; i < 7; i++)
             {
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
         }
+        public delegate void Command();
         public void setCommand(int slot, Command onCommand, Command offCommand)
         {
             onCommands[slot] = onCommand;
@@ -40,11 +46,11 @@ namespace RemoteControlAPI.Devices
         }
         public void onButtonWasPushed(int slot)
         {
-            onCommands[slot].execute();
+            onCommands[slot].Invoke();
         }
         public void offButtonWasPushed(int slot)
         {
-            offCommands[slot].execute();
+            offCommands[slot].Invoke();
         }
         public override string ToString()
         {

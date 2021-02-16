@@ -1,6 +1,6 @@
 ﻿using System;
 using RemoteControlAPI.Devices;
-using RemoteControlAPI.Commands;
+
 
 namespace RemoteControlAPI
 {
@@ -16,26 +16,10 @@ namespace RemoteControlAPI
             GarageDoor garageDoor = new GarageDoor(spaceName: "Garage");
             Stereo stereo = new Stereo(spaceName: "Living Room");
 
-            LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
-            LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
-            LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
-            LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
-
-            CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
-            CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
-
-            GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
-            GarageDoorCloseCommand garageDoorClose = new GarageDoorCloseCommand(garageDoor);
-
-            StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
-            StereoOffCommand stereoOff = new StereoOffCommand(stereo);
-
-            remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
-            remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-            remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
-            remoteControl.setCommand(3, stereoOnWithCD, stereoOff);
-
-            Console.WriteLine(remoteControl);
+            remoteControl.setCommand(0, () => livingRoomLight.on(), () => livingRoomLight.off());
+            remoteControl.setCommand(1, () => kitchenLight.on(), () => kitchenLight.off());
+            remoteControl.setCommand(2, () => ceilingFan.on(), () => ceilingFan.off());
+            remoteControl.setCommand(3, () => stereo.on(), () => stereo.off());
 
             remoteControl.onButtonWasPushed(0);
             remoteControl.offButtonWasPushed(0);
