@@ -7,7 +7,7 @@ namespace RemoteControlAPI.Commands
     {
         public void execute()
         {
-            Console.WriteLine("No command set!!");
+            Console.WriteLine("Slot not configured!");
         }
     }
 }
