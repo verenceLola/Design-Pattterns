@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{E13BEF12-3E39-45C9-9874-71407E5EFF2C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PizzaStore</RootNamespace>
+    <AssemblyName>PizzaStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pizzas\Pizza.cs" />
+    <Compile Include="Stores\PizzaStore.cs" />
+    <Compile Include="Stores\CaliforniaPizzaStore.cs" />
+    <Compile Include="Stores\NYPizzaStore.cs" />
+    <Compile Include="Stores\ChicagoPizzaStore.cs" />
+    <Compile Include="Pizzas\NYStyle\NYStylePepperoniPizza.cs" />
+    <Compile Include="Pizzas\NYStyle\NYStyleCheesePizza.cs" />
+    <Compile Include="Pizzas\NYStyle\NYStyleVeggiePizza.cs" />
+    <Compile Include="Pizzas\NYStyle\NYStyleCalmPizza.cs" />
+    <Compile Include="Pizzas\CaliforniaStyle\CaliforniaStyleCheesePizza.cs" />
+    <Compile Include="Pizzas\ChicagoStyle\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Pizzas\CaliforniaStyle\CaliforniaStylePepperoniPizza.cs" />
+    <Compile Include="Pizzas\CaliforniaStyle\CaliforniaStyleVeggiePizza.cs" />
+    <Compile Include="Pizzas\CaliforniaStyle\CaliforniaStyleCalmPizza.cs" />
+    <Compile Include="Pizzas\ChicagoStyle\ChicagoStyleCalmPizza.cs" />
+    <Compile Include="Pizzas\ChicagoStyle\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="Pizzas\ChicagoStyle\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="Ingredients\Factories\PizzaIngredientFactory.cs" />
+    <Compile Include="Ingredients\Factories\NYIngredientFactory.cs" />
+    <Compile Include="Ingredients\Factories\NYPizzaIngredientFactory.cs" />
+    <Compile Include="Ingredients\Factories\ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="Pizzas\CheesePizza.cs" />
+    <Compile Include="Pizzas\ClamPizza.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.NETFramework.ReferenceAssemblies.net472.1.0.0\build\Microsoft.NETFramework.ReferenceAssemblies.net472.targets" Condition="Exists('..\packages\Microsoft.NETFramework.ReferenceAssemblies.net472.1.0.0\build\Microsoft.NETFramework.ReferenceAssemblies.net472.targets')" />
+</Project>

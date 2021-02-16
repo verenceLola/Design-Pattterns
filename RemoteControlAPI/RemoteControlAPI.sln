@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControlAPI", "src\RemoteControlAPI.csproj", "{AB88158E-5A1D-43AB-8DA7-D9B485E5C3D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB88158E-5A1D-43AB-8DA7-D9B485E5C3D4}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{AB88158E-5A1D-43AB-8DA7-D9B485E5C3D4}.Debug|anycpu.Build.0 = Debug|anycpu
+		{AB88158E-5A1D-43AB-8DA7-D9B485E5C3D4}.Release|anycpu.ActiveCfg = Release|anycpu
+		{AB88158E-5A1D-43AB-8DA7-D9B485E5C3D4}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CE392EA-D1FD-419B-8707-EEF0DA8288E2}
+	EndGlobalSection
+EndGlobal

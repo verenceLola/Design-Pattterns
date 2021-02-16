@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCharacters", "src/GameCharacters.csproj", "{CEE30372-C82D-43F4-8282-5ACAF195927D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEE30372-C82D-43F4-8282-5ACAF195927D}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{CEE30372-C82D-43F4-8282-5ACAF195927D}.Debug|anycpu.Build.0 = Debug|anycpu
+		{CEE30372-C82D-43F4-8282-5ACAF195927D}.Release|anycpu.ActiveCfg = Release|anycpu
+		{CEE30372-C82D-43F4-8282-5ACAF195927D}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3274C86-5623-4623-B381-BEAC673F5E1C}
+	EndGlobalSection
+EndGlobal

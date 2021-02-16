@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{FD1B06DC-A157-481D-B2BD-ED73E5E79F3D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimUDuck</RootNamespace>
+    <AssemblyName>SimUDuck</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Duck.cs" />
+    <Compile Include="Entities\MallardDuck.cs" />
+    <Compile Include="Behaviours\FlyNoWay.cs" />
+    <Compile Include="Behaviours\FlyWithWings.cs" />
+    <Compile Include="Behaviours\MuteQuack.cs" />
+    <Compile Include="Behaviours\Quack.cs" />
+    <Compile Include="Behaviours\Squack.cs" />
+    <Compile Include="Interfaces\Fly.cs" />
+    <Compile Include="Interfaces\Quack.cs" />
+    <Compile Include="Aggregates\FlyrocketPowered.cs" />
+    <Compile Include="Aggregates\ModelDuck.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
