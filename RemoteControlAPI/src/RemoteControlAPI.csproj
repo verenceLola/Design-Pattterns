@@ -43,6 +43,7 @@
     <Compile Include="Devices\CailingFan.cs" />
     <Compile Include="Commands\GarageDoorCommand.cs" />
     <Compile Include="Commands\CeilingFanCommands.cs" />
+    <Compile Include="Commands\MacroCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

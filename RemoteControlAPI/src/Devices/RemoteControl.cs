@@ -31,14 +31,14 @@ namespace RemoteControlAPI.Devices
             onCommands = new Command[7];
             offCommands = new Command[7];
 
-            Command noCommand = new Command(NoCommand);
+            Command noCommand = new NoCommand();
             for (int i = 0; i < 7; i++)
             {
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
         }
-        public delegate void Command();
+        // public delegate void Command();
         public void setCommand(int slot, Command onCommand, Command offCommand)
         {
             onCommands[slot] = onCommand;
@@ -46,11 +46,11 @@ namespace RemoteControlAPI.Devices
         }
         public void onButtonWasPushed(int slot)
         {
-            onCommands[slot].Invoke();
+            onCommands[slot].execute();
         }
         public void offButtonWasPushed(int slot)
         {
-            offCommands[slot].Invoke();
+            offCommands[slot].execute();
         }
         public override string ToString()
         {
