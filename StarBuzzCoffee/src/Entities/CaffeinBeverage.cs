@@ -6,12 +6,15 @@ namespace StarBuzzCoffee.Entities
 {
     public abstract class CaffeinBeverage
     {
-        sealed void prepareRecipe()
+        public void prepareRecipe()
         {
             boilWater();
             brew();
             pourInCup();
-            addCondiments();
+            if (customerWantsCondiments())
+            {
+                addCondiments();
+            }
         }
         public abstract void brew();
         public abstract void addCondiments();
@@ -19,9 +22,10 @@ namespace StarBuzzCoffee.Entities
         {
             Console.WriteLine("Boiling warer");
         }
-        public void porInCup()
+        public void pourInCup()
         {
             Console.WriteLine("Pouring into cup");
         }
+        public virtual bool customerWantsCondiments() => true;
     }
 }

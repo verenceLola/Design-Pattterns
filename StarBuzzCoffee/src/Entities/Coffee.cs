@@ -12,5 +12,9 @@ namespace StarBuzzCoffee.Entities
         {
             Console.WriteLine("Add Sugar and Milk");
         }
+        public override bool customerWantsCondiments()
+        {
+            return false;
+        }
     }
 }

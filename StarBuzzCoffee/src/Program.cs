@@ -1,12 +1,18 @@
 ﻿using System;
+using StarBuzzCoffee.Entities;
 
 namespace StarBuzzCoffee
 {
-    class MainClass
+    class MakeBeverage
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CaffeinBeverage tea = new Tea();
+            CaffeinBeverage coffee = new Coffee();
+
+            tea.prepareRecipe();
+            Console.WriteLine();
+            coffee.prepareRecipe();
         }
     }
 }
