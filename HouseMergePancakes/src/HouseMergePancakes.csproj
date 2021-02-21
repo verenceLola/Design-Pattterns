@@ -42,6 +42,9 @@
     <Compile Include="Interfaces\Menu.cs" />
     <Compile Include="Menus\CaféMenu.cs" />
     <Compile Include="Iterators\CaféMenuIterator.cs" />
+    <Compile Include="Composite\MenuComponent.cs" />
+    <Compile Include="Composite\Menu.cs" />
+    <Compile Include="Composite\MenuItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
