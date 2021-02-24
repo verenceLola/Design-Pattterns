@@ -39,6 +39,7 @@
     <Compile Include="States\HasQuarterState.cs" />
     <Compile Include="States\SoldState.cs" />
     <Compile Include="States\WinnerState.cs" />
+    <Compile Include="Entities\GumballMonitor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

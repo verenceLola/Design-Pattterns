@@ -12,10 +12,11 @@ namespace JawBreakers.Entities
         public IState HasQuarterState { get; private set; }
         public IState SoldState { get; private set; }
         public IState WinnerState { get; private set; }
+        public string Location { get; private set; }
 
-        public IState State { get; private set; } 
+        public IState State { get; private set; }
         public int Count { get; private set; } = 0;
-        public GumballMachine(int numberGumballs)
+        public GumballMachine(int numberGumballs, string location)
         {
             Count = numberGumballs;
             SoldOutState = new SoldOutState(this);
@@ -24,6 +25,7 @@ namespace JawBreakers.Entities
             SoldState = new SoldState(this);
             WinnerState = new WinnerState(this);
             State = SoldOutState;
+            Location = location;
         }
         public void insertQuarter()
         {
